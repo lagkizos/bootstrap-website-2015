@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Project | Contact </title>
+		<link href="style.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="fonts">
+        <!-- Google Maps (Change display position and marker with .LatLng(*, *) -->
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHc_l7HrrTRHILiVmpO4P3eg2lP_c9dcw">
+        </script>
+        <script type="text/javascript">
+            var map;
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(40.6343, 22.9427),
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("map-canvas"),
+                          mapOptions);
+
+                var myLatlng = new google.maps.LatLng(40.6343, 22.9427);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: "'. $xmladd .'"
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+            google.maps.event.addDomListener(window, "resize", function () {
+                var center = map.getCenter();
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(center);
+            });
+        </script>
+	</head>
+
+	<body>
+
+        <nav class="navbar navbar-custom navbar-static-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" style="margin-left:-14px;">
+        <li><a href="index.html"> <span class="glyphicon glyphicon-home"></span> Home </a></li>
+        <li><a href="about.html"> <span class="glyphicon glyphicon-info-sign"></span> About </a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-camera"></span> Gallery <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="ourwork.html"> Our Work </a></li>
+            <li><a href="company.html"> Company </a></li>
+          </ul>
+        </li>
+          <li class="active"><a href="contact.html"> <span class="glyphicon glyphicon-phone-alt"></span> Contact </a></li>
+
+          <li class="visible-xs">
+            <a href="#">
+                <i class="fa fa-facebook fa-lg"></i> Facebook
+            </a>
+            </li>
+            <li class="visible-xs">
+            <a href="#">
+                <i class="fa fa-twitter fa-lg"></i> Twitter
+            </a>
+            </li>
+            <li class="visible-xs">
+            <a href="#">
+                <i class="fa fa-linkedin fa-lg"></i> LinkedIn
+            </a>
+            </li>
+            <li class="visible-xs">            
+                    <div class="col-sm-3 col-md-3">
+                        <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control search-box" placeholder="Search" name="srch-term" id="Text1">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default search-box" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+            </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right nav-pills hidden-xs">
+            <li>
+            <a href="#" class="btn btn-social-icon btn-facebook">
+                <i class="fa fa-facebook fa-lg"></i>
+            </a>
+            </li>
+            <li>
+            <a href="#" class="btn btn-social-icon btn-twitter">
+                <i class="fa fa-twitter fa-lg"></i>
+            </a>
+            </li>
+            <li>
+            <a href="#" class="btn btn-social-icon btn-linkedin">
+                <i class="fa fa-linkedin fa-lg"></i>
+            </a>
+            </li>
+          <li class="dropdown" "visible-xs" "pull-right" "search-bar">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                <ul class="dropdown-menu dropsize">
+                    <form class="navbar-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control search-box" placeholder="Search" name="srch-term" id="srch-term">
+                <div class="input-group-btn">
+                    <button class="btn btn-default search-box" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+                    </form>
+               </ul>
+          </li>
+      </ul>
+
+        </div>
+      </div>
+    </nav>
+
+            <!-- Contact -->
+
+        <div class="container">
+
+        <div class="col-lg-12">
+                <h1><p class="text-center">Our Location</p></h1>
+            </div>	         
+    
+    <div class="col-sm-12">
+
+    <div class="aboutus">
+        <i class="fa fa-map-marker fa-2x mapcustom"></i>
+        </div>
+    </div>
+
+            <!-- Google Map -->
+            
+            <div class="google-maps">
+            <div id="map-canvas" style="height: 300px; width: 100%;"></div>
+            </div>     
+	
+        <div class="col-lg-12">
+                <h1><p class="text-center">Contact</p></h1>
+        </div>	
+    
+    <div class="col-sm-12">
+
+    <div class="aboutus">
+        <i class="fa fa-info fa-2x"></i>
+        </div>
+
+        <div class="row text-center">
+                  <div class="col-sm-3">  
+                    <div class="icon-wrap icon-circle contrast-bg icon-md">
+                      <i class="fa fa-map-marker text-white"></i>
+                    </div>
+                    <h3 style="font-size:20px;">Address</h3>
+                    <ul class="list-unstyled">
+                      <li>Aristotelous Square</li>
+                      <li>Thessaloniki</li>
+                      <li>Greece</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="icon-wrap icon-circle contrast-bg icon-md">
+                      <i class="fa fa-phone text-white"></i>
+                    </div>
+                    <h3 style="font-size:20px;">Telephone</h3>
+                    <ul class="list-unstyled">
+                      <li><div class="link">+030 123 456 910</div></li>
+                      <li><div class="link">+030 123 456 911</div></li>
+                      <li><div class="link">+030 123 456 912</div></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="icon-wrap icon-circle contrast-bg icon-md">
+                      <i class="fa fa-envelope-o text-white"></i>
+                    </div>
+                    <h3 style="font-size:20px;">E-Mail</h3>
+                    <ul class="list-unstyled">
+                      <li><a href="mailto:info@domain.com"><div class="link">info@domain.com</div></a></li>
+                      <li><a href="mailto:support@domain.com"><div class="link">support@domain.com</div></a></li>
+                      <li><a href="mailto:director@domain.com"><div class="link">director@domain.com</div></a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="icon-wrap icon-circle contrast-bg icon-md">
+                      <i class="fa fa-clock-o text-white"></i>
+                    </div>
+                    <h3 style="font-size:20px;">Business Hours</h3>
+                    <ul class="list-unstyled">
+                      <li>
+                        Monday - Friday
+                        &ndash;
+                        <strong>08:00 - 16:00</strong>
+                      </li>
+                      <li>
+                        Saturday
+                        &ndash;
+                        <strong>Closed</strong>
+                      </li>
+                      <li>
+                        Sunday
+                        &ndash;
+                        <strong>Closed</strong>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+    <br />
+    <br />
+    <br />
+
+    </div>
+
+        <div class="row">
+              <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="aboutus">
+        <i class="fa fa-envelope fa-2x"></i>
+        </div>
+                <form class="form form-validation form-contact" method="post" novalidate="novalidate">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="alert alert-success form-contact-success hidden">Your message has been successfully sent!</div>
+                      <div class="alert alert-danger form-contact-error hidden">There was an error sending your message.</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group control-group">
+                        <input class="form-control" data-rule-required="true" name="name" placeholder="Name" type="text">
+                        <!-- / this field is required for simple anti spam function, don"t remove it! -->
+                        <input class="form-control" name="human" placeholder="Are you human?" style="display: none;" type="text">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group control-group">
+                        <input class="form-control" data-rule-email="true" data-rule-required="true" name="email" placeholder="E-Mail" type="email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group control-group">
+                        <textarea class="form-control" rows="12" cols="25" data-rule-required="true" name="message" placeholder="Your message..."></textarea>
+                      </div>
+                    </div>
+                  </div>
+                    
+                    <!-- Newsletter -->
+
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon beautiful" id="target">
+                                <input type="checkbox">
+                            </span>
+                            <input type="text" onfocus="this.blur()" readonly="readonly" class="form-control default-cursor" style="background-color:white;">
+                        </div>
+                    </div>
+
+                    <!-- Change background-color onclick -->
+
+                    <script>
+                        $(document).ready(function () {
+                            $('.input-group-addon').click(function () {
+                                $('#target').toggleClass('nsred');
+                            });
+                        });
+                    </script>
+
+                    <br />
+                
+                    <!-- Send message button -->
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <button class="btn btn-contrast btn-block form-contact-submit" data-loading-text="<i class='fa-icon-refresh fa-icon-spin'></i> Sending..." type="submit">
+                        Send message
+                      </button>
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <!-- Page Footer -->
+ 
+    <nav class="navbar navbar-custom navbar-default-bottom" role="navigation">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+        <ul class="nav navbar-nav" id="footerid">
+        <li><a href="#">&#169; 2015 Company Name</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>  
+    </nav> 
+
+	</body>
+</html>
